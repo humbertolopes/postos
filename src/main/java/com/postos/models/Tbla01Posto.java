@@ -8,38 +8,28 @@ import javax.persistence.Id;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-public class Tbla01Posto {
+public class Tbla01posto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long a01_id;
 	
+	private long a01_fk_b02_id;
+	
+	private long a01_fk_a02_id;
+	
 	@NotBlank
 	private String a01_razao_social;
 	
-	@NotBlank
+	
 	private String a01_nome_fantasia;
 	
-	@NotBlank
-	private double a01_preco_gasolina;
 	
-	@NotBlank
-	private double a01_preco_alcool;
-	
-
-	public double getA01_preco_gasolina() {
-		return a01_preco_gasolina;
+	public long getA01_fk_b02_id() {
+		return a01_fk_b02_id;
 	}
 
-	public void setA01_preco_gasolina(double a01_preco_gasolina) {
-		this.a01_preco_gasolina = a01_preco_gasolina;
-	}
-
-	public double getA01_preco_alcool() {
-		return a01_preco_alcool;
-	}
-
-	public void setA01_preco_alcool(double a01_preco_alcool) {
-		this.a01_preco_alcool = a01_preco_alcool;
+	public void setA01_fk_b02_id(long a01_fk_b02_id) {
+		this.a01_fk_b02_id = a01_fk_b02_id;
 	}
 
 	public long getA01_id() {
@@ -64,6 +54,14 @@ public class Tbla01Posto {
 
 	public void setA01_nome_fantasia(String a01_nome_fantasia) {
 		this.a01_nome_fantasia = a01_nome_fantasia;
+	}
+	
+	public long getA01_fk_a02_id() {
+		return a01_fk_a02_id;
+	}
+
+	public void setA01_fk_a02_id(long a01_fk_a02_id) {
+		this.a01_fk_a02_id = a01_fk_a02_id;
 	}
 }
 
