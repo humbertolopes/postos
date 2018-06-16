@@ -11,29 +11,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.postos.models.Tbla01posto;
-import com.postos.repository.Tbla01PostoRepository;
+import com.postos.models.Tbl_posto;
+import com.postos.repository.PostoRepository;
 
 @RestController
 @RequestMapping("/posto")
 public class PostoResource {
 	
 	@Autowired
-	private Tbla01PostoRepository pr;
+	private PostoRepository pr;
 	
 	@GetMapping(produces="application/json")
-	public @ResponseBody Iterable<Tbla01posto> ListaEventos() {
-		Iterable<Tbla01posto> listaPostos = pr.findAll();
+	public @ResponseBody Iterable<Tbl_posto> ListaEventos() {
+		Iterable<Tbl_posto> listaPostos = pr.findAll();
 		return listaPostos;
 	}
 	
 	@PostMapping("/cadastra")
-	public Tbla01posto cadastraPosto(@RequestBody @Valid Tbla01posto posto) {
+	public Tbl_posto cadastraPosto(@RequestBody @Valid Tbl_posto posto) {
 		return pr.save(posto);
 	}
 	
 	@DeleteMapping("/deleta")
-	public Tbla01posto deletaPosto(@RequestBody Tbla01posto posto) {
+	public Tbl_posto deletaPosto(@RequestBody Tbl_posto posto) {
 		pr.delete(posto);
 		return posto;
 	}
