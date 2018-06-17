@@ -1,4 +1,4 @@
-package com.postos;
+package com.posto;
 
 import javax.sql.DataSource;
 

@@ -1,4 +1,6 @@
-package com.postos.models;
+package com.posto.model;
+
+import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +10,10 @@ import javax.persistence.Id;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-public class Tbl_posto {
+public class Tbl_posto implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id_posto;
@@ -22,14 +27,13 @@ public class Tbl_posto {
 	
 	private String nome_fantasia_posto;
 	
-	private int autorizado_anp_posto;
+	private Boolean autorizado_anp_posto;
 
-	
-	public int getAutorizado_anp_posto() {
+	public Boolean getAutorizado_anp_posto() {
 		return autorizado_anp_posto;
 	}
 
-	public void setAutorizado_anp_posto(int autorizado_anp_posto) {
+	public void setAutorizado_anp_posto(Boolean autorizado_anp_posto) {
 		this.autorizado_anp_posto = autorizado_anp_posto;
 	}
 

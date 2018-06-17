@@ -1,4 +1,4 @@
-package com.postos.models;
+package com.posto.model;
 
 
 import javax.persistence.Entity;
