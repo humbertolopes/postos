@@ -39,6 +39,8 @@ public class Tbl_posto_autorizado {
 	private String dt_vincu_distr_posto_autorizado;
 	
 	private String razao_social_posto_autorizado;
+	
+	private Boolean autorizado_anp;
 
 	public String getNum_aut_posto_autorizado() {
 		return num_aut_posto_autorizado;
@@ -148,6 +150,13 @@ public class Tbl_posto_autorizado {
 		return id_posto_autorizado;
 	}
 
+	public Boolean getAutorizado_anp() {
+		return autorizado_anp;
+	}
+
+	public void setAutorizado_anp(Boolean autorizado_anp) {
+		this.autorizado_anp = autorizado_anp;
+	}
 
 
 }

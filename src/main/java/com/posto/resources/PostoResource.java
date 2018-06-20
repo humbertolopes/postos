@@ -32,6 +32,7 @@ public class PostoResource {
 	private PostoService postoService;
 	
 	
+	
 	@GetMapping(produces="application/json")
 	public @ResponseBody Iterable<Tbl_posto> ListaEventos() {
 		Iterable<Tbl_posto> listaPostos = pr.pesquisarPosto();
@@ -55,9 +56,19 @@ public class PostoResource {
 		return posto;
 	}
 	
-	@GetMapping("/atualizapostos")
+	@GetMapping("/atualizaPostos")
 	public @ResponseBody Iterable<Tbl_posto> atualizaPosto() {
 		return postoService.atualizaPosto();
+	}
+	
+	@GetMapping("/atualizaInfoGasolina")
+	public @ResponseBody Iterable<Tbl_posto> atualizaInfoGasolina() {
+		return postoService.atualizaInfoGasolina();
+	}
+	
+	@GetMapping("/atualizaInfoAlcool")
+	public @ResponseBody Iterable<Tbl_posto> atualizaInfoAlcool() {
+		return postoService.atualizaInfoAlcool();
 	}
 	
 	@GetMapping("/autorizados_anp")
@@ -68,6 +79,16 @@ public class PostoResource {
 	@GetMapping("/getpostos")
 	public @ResponseBody Iterable<PostoMetadata> getpostos() {
 		return postoService.getPostos();
+	}
+	
+	@GetMapping("/postosAutorizados")
+	public @ResponseBody Iterable<PostoMetadata> postosAutorizados() {
+		return postoService.getPostosAutorizados();
+	}
+	
+	@GetMapping("/postosNaoAutorizados")
+	public @ResponseBody Iterable<PostoMetadata> postosNaoAutorizados() {
+		return postoService.getPostosNaoAutorizados();
 	}
 
 }

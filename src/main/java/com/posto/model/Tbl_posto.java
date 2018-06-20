@@ -32,6 +32,27 @@ public class Tbl_posto implements Serializable{
 	private String nome_fantasia_posto;
 	
 	private Boolean autorizado_anp_posto;
+	
+	private Double preco_compra_gasolina_posto;
+	
+	private Double preco_venda_gasolina_posto;
+	
+	private String data_preco_gasolina_posto;
+	
+	private Boolean nota_fiscal_compra_gasolina_posto;
+	
+	private Double preco_compra_alcool_posto;
+	
+	private Double preco_venda_alcool_posto;
+	
+	private String data_preco_alcool_posto;
+	
+	private Boolean nota_fiscal_compra_alcool_posto;
+	
+	private Boolean aceita_credito_posto;
+	
+	private Boolean acrescimo_credito_posto;
+	
 
 	public Boolean getAutorizado_anp_posto() {
 		return autorizado_anp_posto;
@@ -95,6 +116,86 @@ public class Tbl_posto implements Serializable{
 
 	public void setEndereco_posto(String endereco_posto) {
 		this.endereco_posto = endereco_posto;
+	}
+
+	public Boolean getAceita_credito_posto() {
+		return aceita_credito_posto;
+	}
+
+	public void setAceita_credito_posto(Boolean aceita_credito_posto) {
+		this.aceita_credito_posto = aceita_credito_posto;
+	}
+
+	public Boolean getAcrescimo_credito_posto() {
+		return acrescimo_credito_posto;
+	}
+
+	public void setAcrescimo_credito_posto(Boolean acrescimo_credito_posto) {
+		this.acrescimo_credito_posto = acrescimo_credito_posto;
+	}
+
+	public String getData_preco_gasolina_posto() {
+		return data_preco_gasolina_posto;
+	}
+
+	public void setData_preco_gasolina_posto(String data_preco_gasolina_posto) {
+		this.data_preco_gasolina_posto = data_preco_gasolina_posto;
+	}
+
+	public Boolean getNota_fiscal_compra_gasolina_posto() {
+		return nota_fiscal_compra_gasolina_posto;
+	}
+
+	public void setNota_fiscal_compra_gasolina_posto(Boolean nota_fiscal_compra_gasolina_posto) {
+		this.nota_fiscal_compra_gasolina_posto = nota_fiscal_compra_gasolina_posto;
+	}
+
+	public String getData_preco_alcool_posto() {
+		return data_preco_alcool_posto;
+	}
+
+	public void setData_preco_alcool_posto(String data_preco_alcool_posto) {
+		this.data_preco_alcool_posto = data_preco_alcool_posto;
+	}
+
+	public Boolean getNota_fiscal_compra_alcool_posto() {
+		return nota_fiscal_compra_alcool_posto;
+	}
+
+	public void setNota_fiscal_compra_alcool_posto(Boolean nota_fiscal_compra_alcool_posto) {
+		this.nota_fiscal_compra_alcool_posto = nota_fiscal_compra_alcool_posto;
+	}
+
+	public Double getPreco_compra_gasolina_posto() {
+		return preco_compra_gasolina_posto;
+	}
+
+	public void setPreco_compra_gasolina_posto(Double preco_compra_gasolina_posto) {
+		this.preco_compra_gasolina_posto = preco_compra_gasolina_posto;
+	}
+
+	public Double getPreco_venda_gasolina_posto() {
+		return preco_venda_gasolina_posto;
+	}
+
+	public void setPreco_venda_gasolina_posto(Double preco_venda_gasolina_posto) {
+		this.preco_venda_gasolina_posto = preco_venda_gasolina_posto;
+	}
+
+	public Double getPreco_compra_alcool_posto() {
+		return preco_compra_alcool_posto;
+	}
+
+	public void setPreco_compra_alcool_posto(Double preco_compra_alcool_posto) {
+		this.preco_compra_alcool_posto = preco_compra_alcool_posto;
+	}
+
+	public Double getPreco_venda_alcool_posto() {
+		return preco_venda_alcool_posto;
+	}
+
+	public void setPreco_venda_alcool_posto(Double preco_venda_alcool_posto) {
+		this.preco_venda_alcool_posto = preco_venda_alcool_posto;
 	}
 
 }
