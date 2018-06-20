@@ -15,7 +15,6 @@ public interface PostoRepository extends JpaRepository<Tbl_posto, Long>{
     List<Tbl_posto> pesquisarPosto();
      
     @Query("select p from Tbl_posto p where autorizado_anp_posto is not null")
-    List<Tbl_posto> getPostosAlutorizados();
-	
-
+    List<Tbl_posto> getPostosAutorizados();
+    
 }

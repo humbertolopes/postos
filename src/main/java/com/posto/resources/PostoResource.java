@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.posto.metadata.PostoMetadata;
 import com.posto.model.Tbl_posto;
 import com.posto.model.Tbl_posto_autorizado;
 import com.posto.repository.PostoAutorizadoRepository;
@@ -61,7 +62,12 @@ public class PostoResource {
 	
 	@GetMapping("/autorizados_anp")
 	public @ResponseBody Iterable<Tbl_posto> getPostosAutorizados() {
-		return pr.getPostosAlutorizados();
+		return pr.getPostosAutorizados();
+	}
+	
+	@GetMapping("/getpostos")
+	public @ResponseBody Iterable<PostoMetadata> getpostos() {
+		return postoService.getPostos();
 	}
 
 }

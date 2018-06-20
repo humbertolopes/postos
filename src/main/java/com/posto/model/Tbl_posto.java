@@ -22,6 +22,10 @@ public class Tbl_posto implements Serializable{
 	
 	private long fk_id_bandeira_posto;
 	
+	private long fk_id_bairro_posto;
+	
+	private String endereco_posto;
+	
 	@NotBlank
 	private String razao_social_posto;
 	
@@ -75,7 +79,23 @@ public class Tbl_posto implements Serializable{
 
 	public void setNome_fantasia_posto(String nome_fantasia_posto) {
 		this.nome_fantasia_posto = nome_fantasia_posto;
-	}	
+	}
+	
+	public long getFk_id_bairro_posto() {
+		return fk_id_bairro_posto;
+	}
+
+	public void setFk_id_bairro_posto(long fk_id_bairro_posto) {
+		this.fk_id_bairro_posto = fk_id_bairro_posto;
+	}
+
+	public String getEndereco_posto() {
+		return endereco_posto;
+	}
+
+	public void setEndereco_posto(String endereco_posto) {
+		this.endereco_posto = endereco_posto;
+	}
 
 }
 
