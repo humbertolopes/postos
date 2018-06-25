@@ -1,0 +1,89 @@
+<html ng-app="uploadApp">
+<head>
+<meta charset="utf8" />
+<title>Document Upload</title>
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+</head>
+<body ng-controller="docController">
+	<div class="container">
+
+		<div class="row">
+		
+			<div style="height: 70px; background-color: #053d4e;margin-top: 1%;" >
+				<div style="width: 30%;float: left">
+					<img style="width: 20%;" src="imagens/logo-hotmart.png"/>
+				</div>
+				<div style="width: 60%;float: left;">
+					<h2 style="color: white;font-weight: bold;">Pesquise Postos</h2>
+				</div>
+				
+			</div>
+            
+            <table class="table table-bordered">
+            
+            	<tr>
+            		<td>
+            			Identificação do Usuário:
+            			<input type="text" ng-model="identificadorUsuario">
+            		</td>
+            		
+            		<td>
+                    	<input type="file" class="custom-file-input" file-model="file">
+                    </td>
+                    
+                     <td style="text-align: center;">
+                    	<button style="background-color: #f04e23;border-color: #d2370e;color: #fff; font-weight: 700;"ng-click="upload()">Upload</button>
+                    </td>
+            	</tr>
+
+            </table>
+            
+        </div>
+        
+            <div class="row">
+		        <table class="table table-bordered">
+			<thead>
+    			<tr>
+    				<th>Razao Social</th>
+    				<th>Bandeira</th>
+    				<th>ANP</th>
+    				<th>PC Gaso</th>
+    				<th>PV Gaso</th>
+    				<th>DtC Gaso</th>
+    				<th>NFC Gas</th>
+    				<th>PC Alcool</th>
+    				<th>PV Alcool</th>
+    				<th>DtC Alcool</th>
+    				<th>NFC Alcool</th>
+    				<th>Endereço</th>
+    				<th>Bairro</th>
+    			</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="doc in docList">
+					<td><a>{{doc.razao_social}}</a></td>
+					<td><a>{{doc.bandeira}}</a></td>
+					<td><a>{{doc.autorizado_anp}}</a></td>
+					<td><a>{{doc.preco_compra_gasolina}}</a></td>
+					<td><a>{{doc.preco_venda_gasolina}}</a></td>
+					<td><a>{{doc.data_preco_gasolina}}</a></td>
+					<td><a>{{doc.nota_fical_compra_gasolina}}</a></td>
+					<td><a>{{doc.preco_compra_alcool}}</a></td>
+					<td><a>{{doc.preco_venda_alcool}}</a></td>
+					<td><a>{{doc.data_preco_alcool}}</a></td>
+					<td><a>{{doc.nota_fical_compra_alcool}}</a></td>
+					<td><a>{{doc.endereco}}</a></td>
+					<td><a>{{doc.bairro}}</a></td>
+				</tr>
+			</tbody>		
+		</table>
+		</div>
+	</div>
+    </div>
+    <script src="lib/plugin/jquery-2.2.1.min.js"></script>
+	<script src="lib/plugin/bootstrap.min.js"></script>
+	<script src="lib/plugin/angular.min.js"></script>
+	<script src="documentService.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
