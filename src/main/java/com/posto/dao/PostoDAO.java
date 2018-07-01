@@ -33,7 +33,12 @@ public class PostoDAO {
 					+ "preco_compra_alcool_posto, "
 					+ "preco_venda_alcool_posto, "
 					+ "data_preco_alcool_posto, "
-					+ "nota_fiscal_compra_alcool_posto "
+					+ "nota_fiscal_compra_alcool_posto, "
+					+ "aceita_credito_posto, "
+					+ "acrescimo_credito_posto, "
+					+ "porcentagem_acrescimo_cartao_posto, "
+					+ "preco_gasolina_usuario_posto, "
+					+ "preco_alcool_usuario_posto "
 					+ "from tbl_posto "
 					+ "left join tbl_bandeira on fk_id_bandeira_posto = id_bandeira "
 					+ "left join tbl_bairro on fk_id_bairro_posto = id_bairro "
@@ -59,6 +64,11 @@ public class PostoDAO {
 				posto.setPreco_venda_alcool(rs.getDouble("preco_venda_alcool_posto"));
 				posto.setData_preco_alcool(rs.getString("data_preco_alcool_posto"));
 				posto.setNota_fical_compra_alcool(rs.getBoolean("nota_fiscal_compra_alcool_posto"));
+				posto.setAceita_credito(rs.getBoolean("aceita_credito_posto"));
+				posto.setAcrescimo_credito(rs.getBoolean("acrescimo_credito_posto"));
+				posto.setPorcentagem_acrescimo_cartao_posto(rs.getLong("porcentagem_acrescimo_cartao_posto"));
+				posto.setPreco_gasolina_informado_usuario(rs.getDouble("preco_gasolina_usuario_posto"));
+				posto.setPreco_alcool_informado_usuario(rs.getDouble("preco_alcool_usuario_posto"));
 				lista.add(posto);
 			}
 			ps.close();

@@ -15,6 +15,12 @@ public class PostoMetadata {
 	Double preco_venda_alcool;
 	String data_preco_alcool;
 	Boolean nota_fical_compra_alcool;
+	Boolean aceita_credito;
+	Boolean acrescimo_credito;
+	Long porcentagem_acrescimo_cartao_posto;
+	Double preco_gasolina_informado_usuario;
+	Double preco_alcool_informado_usuario;
+	
 	
 	public Long getId() {
 		return id;
@@ -100,6 +106,36 @@ public class PostoMetadata {
 	}
 	public void setPreco_venda_alcool(Double preco_venda_alcool) {
 		this.preco_venda_alcool = preco_venda_alcool;
+	}
+	public Boolean getAceita_credito() {
+		return aceita_credito;
+	}
+	public void setAceita_credito(Boolean aceita_credito) {
+		this.aceita_credito = aceita_credito;
+	}
+	public Boolean getAcrescimo_credito() {
+		return acrescimo_credito;
+	}
+	public void setAcrescimo_credito(Boolean acrescimo_credito) {
+		this.acrescimo_credito = acrescimo_credito;
+	}
+	public Long getPorcentagem_acrescimo_cartao_posto() {
+		return porcentagem_acrescimo_cartao_posto;
+	}
+	public void setPorcentagem_acrescimo_cartao_posto(Long porcentagem_acrescimo_cartao_posto) {
+		this.porcentagem_acrescimo_cartao_posto = porcentagem_acrescimo_cartao_posto;
+	}
+	public Double getPreco_gasolina_informado_usuario() {
+		return preco_gasolina_informado_usuario;
+	}
+	public void setPreco_gasolina_informado_usuario(Double preco_gasolina_informado_usuario) {
+		this.preco_gasolina_informado_usuario = preco_gasolina_informado_usuario;
+	}
+	public Double getPreco_alcool_informado_usuario() {
+		return preco_alcool_informado_usuario;
+	}
+	public void setPreco_alcool_informado_usuario(Double preco_alcool_informado_usuario) {
+		this.preco_alcool_informado_usuario = preco_alcool_informado_usuario;
 	}
 	
 

@@ -53,6 +53,12 @@ public class Tbl_posto implements Serializable{
 	
 	private Boolean acrescimo_credito_posto;
 	
+	private Long porcentagem_acrescimo_cartao_posto;
+	
+	private Double preco_gasolina_usuario_posto;
+	
+	private Double preco_alcool_usuario_posto;
+	
 
 	public Boolean getAutorizado_anp_posto() {
 		return autorizado_anp_posto;
@@ -196,6 +202,30 @@ public class Tbl_posto implements Serializable{
 
 	public void setPreco_venda_alcool_posto(Double preco_venda_alcool_posto) {
 		this.preco_venda_alcool_posto = preco_venda_alcool_posto;
+	}
+
+	public Long getPorcentagem_acrescimo_cartao_posto() {
+		return porcentagem_acrescimo_cartao_posto;
+	}
+
+	public void setPorcentagem_acrescimo_cartao_posto(Long porcentagem_acrescimo_cartao_posto) {
+		this.porcentagem_acrescimo_cartao_posto = porcentagem_acrescimo_cartao_posto;
+	}
+
+	public Double getPreco_gasolina_usuario_posto() {
+		return preco_gasolina_usuario_posto;
+	}
+
+	public void setPreco_gasolina_usuario_posto(Double preco_gasolina_usuario_posto) {
+		this.preco_gasolina_usuario_posto = preco_gasolina_usuario_posto;
+	}
+
+	public Double getPreco_alcool_usuario_posto() {
+		return preco_alcool_usuario_posto;
+	}
+
+	public void setPreco_alcool_usuario_posto(Double preco_alcool_usuario_posto) {
+		this.preco_alcool_usuario_posto = preco_alcool_usuario_posto;
 	}
 
 }
